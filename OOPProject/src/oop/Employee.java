@@ -1,12 +1,11 @@
 package oop;
-import oop.Employee;
-import oop.Faculty;
+
 public abstract class Employee {
-    int paidTimeOff;
-    String payType;
-    String name;
-    double payRate;
-    int daysTakenOff;
+    private int paidTimeOff;
+    private String payType;
+   private String name;
+   private double payRate;
+    private int daysTakenOff;
 
     public Employee(int paidTimeOff, String payType, String name, double payRate) {
         this.paidTimeOff = paidTimeOff;

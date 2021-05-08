@@ -1,7 +1,7 @@
 package oop;
 
 import java.util.ArrayList;
-import oop.NetSalaryAndDeductions;
+
 public class EmployeesOnPayroll {
     private ArrayList<Staff> staffList = new ArrayList<>();
     private ArrayList<Faculty> facultyList = new ArrayList<>();
