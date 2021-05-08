@@ -1,7 +1,7 @@
 package oop;
 
 import java.util.ArrayList;
-
+import oop.NetSalaryAndDeductions;
 public class EmployeesOnPayroll {
     private ArrayList<Staff> staffList = new ArrayList<>();
     private ArrayList<Faculty> facultyList = new ArrayList<>();
@@ -135,7 +135,31 @@ public class EmployeesOnPayroll {
              return false;
          }
 
-         
+         public String getNetSalaryAndDeductions(String name, String type, String department) {
+            String salAndDeduc = "";
+             if (type.equalsIgnoreCase("Faculty")) {
+                 for (Faculty f : facultyList) {
+                     if (f.getName().equalsIgnoreCase(name)) {
+                         Object o = (Object) f;
+                        salAndDeduc = NetSalaryAndDeductions.calculateNetSalaryAndDeductions(o, type, department);
+                        return salAndDeduc;
+                     }
+
+                 }
+             } else if (type.equalsIgnoreCase("Staff")) {
+                 for (Staff s : staffList) {
+                     if (s.getName().equalsIgnoreCase(name)) {
+                         Object o = (Object) s;
+                         salAndDeduc = NetSalaryAndDeductions.calculateNetSalaryAndDeductions(o, type, department);
+                         return salAndDeduc;
+                     }
+
+                 }
+             }
+             return "Did not find employee from information given.";
+         }
+
+
       }
 
 
